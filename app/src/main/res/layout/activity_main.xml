@@ -6,13 +6,127 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ubuntu" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="119dp"
+        android:layout_height="145dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.468"
+        app:srcCompat="@drawable/myfoto" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="390dp" />
+
+    <TextView
+        android:id="@+id/profileText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@adamarthurf"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/headerText" />
+
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adam Arthur Faizal"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttonFollow"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="#64B5F6"
+        android:text="following"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.32" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="366dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="12dp"
+        android:text="Bio for Adam Arthur Faizal Here... Bio for Adam Arthur Faizal Here... Bio for Adam Arthur Faizal Here... Bio for Adam Arthur Faizal Here... Bio for Adam Arthur Faizal Here... Bio for Adam Arthur Faizal Here... Bio for Adam Arthur Faizal Here... Bio for Adam Arthur Faizal Here... Bio for Adam Arthur Faizal Here... Bio for Adam Arthur Faizal Here... Bio for Adam Arthur Faizal Here..."
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/profileText" />
+
+    <RadioButton
+        android:id="@+id/website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="adamarthurf.github.io"
+        android:textColor="#0288D1"
+        app:layout_constraintEnd_toStartOf="@+id/joined"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <RadioButton
+        android:id="@+id/joined"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:text="joined July 2013"
+        android:textColor="#7B7979"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/following"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100 following"
+        app:layout_constraintEnd_toStartOf="@+id/followers"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/website" />
+
+    <TextView
+        android:id="@+id/followers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="180dp"
+        android:layout_marginRight="180dp"
+        android:text="100 followers"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/website" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
